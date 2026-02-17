@@ -20,3 +20,4 @@ sparc64/bin/*
 sparc64/lib/*
 spim/bin/*
 spim/lib/*
+*.log
