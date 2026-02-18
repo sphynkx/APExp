@@ -621,11 +621,11 @@ static void close_and_set_permissions( const struct stat * const in_statsp )
     {
     const mode_t mode = in_statsp->st_mode;
     /* fchown in many cases returns with EPERM, which can be safely ignored. */
-    if( fchown( (char *) outfd, in_statsp->st_uid, in_statsp->st_gid ) == 0 )
-      { if( fchmod( (char *) outfd, mode ) != 0 ) warning = true; }
+    if( fchown( outfd, in_statsp->st_uid, in_statsp->st_gid ) == 0 )
+      { if( fchmod( outfd, mode ) != 0 ) warning = true; }
     else
       if( errno != EPERM ||
-          fchmod( (char *) outfd, mode & ~( S_ISUID | S_ISGID | S_ISVTX ) ) != 0 )
+          fchmod( outfd, mode & ~( S_ISUID | S_ISGID | S_ISVTX ) ) != 0 )
         warning = true;
     }
   if( close( outfd ) != 0 )
