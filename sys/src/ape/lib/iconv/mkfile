@@ -49,5 +49,5 @@ install:V:
 
 nuke:V:
 	mk clean
-	rm $LIB
+	rm -f $LIB
 

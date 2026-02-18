@@ -12,7 +12,7 @@ install:V:
 	mv libf2c.a$O $LIB
 
 clean:V:
-	rm $F2CSRC/lib/*.$O
-	rm $F2CSRC/lib/*.a$O
+	rm -f $F2CSRC/lib/*.$O
+	rm -f $F2CSRC/lib/*.a$O
 
-
+nuke:V: clean

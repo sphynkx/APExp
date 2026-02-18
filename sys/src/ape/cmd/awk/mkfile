@@ -79,6 +79,6 @@ install:V:
 
 nuke:V:
 	rm -rf $APEXPROOT/sys/lib/ape/awk
-	rm -f  $APEXPROOT/rc/bin/ape/igawk
-	rm -f $APEXPROOT/sys/man/1/gawk
+	# rm -f  $APEXPROOT/rc/bin/ape/igawk
+	# rm -f $APEXPROOT/sys/man/1/gawk
 

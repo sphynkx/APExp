@@ -127,11 +127,14 @@ installall:V:
 clean:V:
 	mk -f mkfile.libpcre $target
 	mk -f mkfile.libpcreposix $target
-	rm *.a
+	rm -f *.a
 
 nuke:V:
 	mk -f mkfile.libpcre $target
 	mk -f mkfile.libpcreposix $target
-	mk -f mkfile.pcretest $target
-	rm -f $APEXPROOT/rc/bin/ape/pcre2-config
+	if(test -f mkfile.pcretest)
+		mk -f mkfile.pcretest $target
+	if not
+		echo skipping mkfile.pcretest
+	# rm -f $APEXPROOT/rc/bin/ape/pcre2-config
 

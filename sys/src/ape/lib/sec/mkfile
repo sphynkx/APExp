@@ -9,16 +9,20 @@ default:V:	all
 install all:V:
 	for(i in port $objtype)@{
 		echo $i
-		cd $i
-		mk $MKFLAGS $target
+		if(test -d $i){
+			cd $i
+			mk $MKFLAGS $target
+		}
 	}
 
 clean:V:
 	rm -f [$OS].* *.[$OS]
 	for(i in $DIRS)@{
 		echo $i
-		cd $i
-		mk $MKFLAGS $target
+		if(test -d $i)
+			@{ cd $i; mk $MKFLAGS $target }
+		if not
+			@{ echo }
 	}
 
 nuke:V: clean

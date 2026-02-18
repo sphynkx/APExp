@@ -24,6 +24,6 @@ nuke:V:
 	mk clean
 	rm -f $LIB
 	rm -f $APEXPROOT/$objtype/lib/ape/libpcreposix.a
-	rm -f $APEXPROOT/sys/include/ape/pcre2posix.h
-	rm -f $APEXPROOT/sys/include/ape/regex.h
+	# rm -f $APEXPROOT/sys/include/ape/pcre2posix.h
+	# rm -f $APEXPROOT/sys/include/ape/regex.h
 

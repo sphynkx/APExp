@@ -8,3 +8,8 @@ default:V:
 install:V: default
 
 all:V: default
+
+clean:V:
+	@{ echo }
+
+nuke:V: clean

@@ -9,17 +9,20 @@ default:V:	all
 install all:V:
 	for(i in $DIRS $objtype)@{
 		echo $i
-		cd $i
-		mk $MKFLAGS $target
+		if(test -d $i){
+			cd $i
+			mk $MKFLAGS $target
+		}
 	}
 
 installall:V:
 	for(objtype in $CPUS) mk $MKFLAGS install
 
-
 clean nuke:V:
 	for(i in $DIRS $CPUS)@{
 		echo $i
-		cd $i
-		mk $MKFLAGS $target
+		if(test -d $i){
+			cd $i
+			mk $MKFLAGS $target
+		}
 	}

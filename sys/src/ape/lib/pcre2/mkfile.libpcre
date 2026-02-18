@@ -55,5 +55,5 @@ nuke:V:
 	mk clean
 	rm -f $LIB
 	rm -f $APEXPROOT/$objtype/lib/ape/libpcre2.a
-	rm -f $APEXPROOT/sys/include/ape/pcre2.h
+	# rm -f $APEXPROOT/sys/include/ape/pcre2.h
 

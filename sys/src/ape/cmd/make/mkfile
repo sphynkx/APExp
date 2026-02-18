@@ -67,7 +67,7 @@ clean:V:
 
 nuke:V:
 	rm -f *.[$OS] y.tab.? y.debug y.output [$OS].$TARG $TARG
-	rm -f $APEXPROOT/sys/man/1/make
+	# rm -f $APEXPROOT/sys/man/1/make
 
 install:V:
 	cp $GMAKESRC/doc/make.1 $APEXPROOT/sys/man/1/make
